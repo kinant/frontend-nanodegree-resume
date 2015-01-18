@@ -15,15 +15,16 @@
 
 h1 {
   font-size: 40px;
-  color: #F5A623;
+  color: white;
   line-height: 48px;
   display: inline;
+  padding-bottom: 55px;
 }
 
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999999;
+  color: #262626;
   line-height: 29px;
   padding: 10px;
 }
@@ -31,7 +32,7 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000000;
+  color: #141823;
   line-height: 22px;
 }
 
@@ -48,6 +49,13 @@ h2, h3, h4, h5 {
   padding-right: 5%;
 }
 
+span {
+  color: white;
+}
+
+#topContacts {
+  margin-bottom: 10px;
+}
 
 .date-text {
   font-style: italic;
@@ -87,16 +95,17 @@ a {
 }
 
 #skillsH3 {
-  color: #F5AE23;
+  color: #8998BE;
   display: none;
 }
 
 .orange {
-  background-color: #F5AE23;
+  background-color: #3a5795;
+  color : #8998BE;
 }
 
 .orange-text {
-  color: #F5AE23;
+  color: #8998BE;
 }
 
 .white-text {
@@ -105,18 +114,18 @@ a {
 }
 
 .gray {
-  background-color: #F3F3F3;
+  background-color: #E8ECF3;
   padding-bottom: 10px;
   clear:both;
 }
 
 .dark-gray {
-  background-color: #4A4A4A;
+  background-color: #203165;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #3a5795;
 }
 
 .flex-box {
@@ -164,6 +173,11 @@ img {
 
 span {
   padding: 5px;
+}
+
+hr {
+  margin-bottom: 15px;
+  margin-top: 5px;
 }
 
 #letsConnect {

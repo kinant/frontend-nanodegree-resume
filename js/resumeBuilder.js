@@ -63,18 +63,18 @@ var bio = {
 var work = {
 	"jobs" : [
 		{
-			"employer" : "Unisource Holding, Inc.",
-			"title" : "Director",
+			"employer" : "Random Company",
+			"title" : "Developer",
 			"location" : "Guatemala",
-			"dates" : "2009-present",
-			"description" : "Director. Assist in Administration."
+			"dates" : "2009-2011",
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 		},
 		{
-			"employer" : "Unisource Holding, Inc. 2",
-			"title" : "Director 2",
-			"location" : "Guatemala 2",
-			"dates" : "2009-present 2",
-			"description" : "Director. Assist in Administration. 2"
+			"employer" : "Total Random Comany",
+			"title" : "Programmer",
+			"location" : "Venezuela",
+			"dates" : "2011-present",
+			"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 		}
 	],
 	"display" : function(){
@@ -175,13 +175,13 @@ var education = {
 var projects = {
 	"project" : [
 		{
-			"title" : "Project 1",
+			"title" : "Project 1: Mock-Up Website",
 			"dates" : "2014-2015",
 			"description" : "Udacity Nanodegree Project 1",
 			"images" : ["http://placehold.it/300x300","http://placehold.it/300x300"]
 		},
 		{
-			"title" : "Project 2",
+			"title" : "Project 2: Resume Page",
 			"dates" : "2015",
 			"description" : "Udacity Nanodegree Project 2",
 			"images" : ["http://placehold.it/300x300","http://placehold.it/300x300"]

@@ -159,6 +159,12 @@ img {
   padding: 10px;
 }
 
+.circular {
+  border-radius: 55px;
+  -webkit-border-radius: 55px;
+  -moz-border-radius: 55px;
+}
+
 /* Bar chart stuff */
 .chart div {
   font: 10px sans-serif;

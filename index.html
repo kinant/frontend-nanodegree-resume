@@ -24,6 +24,9 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <!-- Load the page styles. -->
   <link href="css/style.css" rel="stylesheet" type="text/css">
   <link href="css/menu-2.css" rel="stylesheet" type="text/css">
+  
+  <!-- Load bootstrap. -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 
   <!--
   jQuery is a common JavaScript library for reading and making changes to the
@@ -53,15 +56,65 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <meta name="viewport" content="width=device-width">
 </head>
 <body>
-  <div id="main">
-
+  <div id="main" class="container">
+    <div class = "row" id="header">
+      <div class="col-md-5 text-left">
+        <h1>Kinan Turjman</h1>
+      </div>
+      <div class="col-md-7">
+        <div id="sse1" class="">
+          <div id="sses1">
+            <ul>
+              <li><a href="#workExperience">Experience</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#education">Education</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="header">
+      <div class="col-md-12" id="bio">
+      </div>
+    </div>
+    <div class="row" id="header">
+      <div class="col-md-12">
+        <hr/>
+        <ul id="topContacts" class='flex-box'></ul>
+      </div>
+    </div>
+    <div class="row gray">
+      <div class="col-md-6" id="workExperience">
+        <h2>Work Experience</h2>
+      </div>
+      <div class="col-md-6" id="education">
+        <h2>Education</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6" id="projects">
+        <h2>Projects</h2>
+      </div>
+      <div class="col-md-6" id="mapDiv">
+        <h2>Where I've Lived and Worked</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="letsConnect" class='dark-gray'>
+          <h2 class='orange center-text'>Let's Connect</h2>
+            <ul id="footerContacts" class="flex-box">
+          </ul>
+        </div>
+      </div>
+    </div>
     <!--
     Everything from here to the <script> tag below is the skeleton of your
     website. Your code will add information to each of the sections of the
     resume below. You can pretty easily figure out what each section will
     display by looking at the id or at what's written between the <h2> tags.
     -->
-    <div id="header" class="center-content clearfix">
+    <!-- <div id="header" class="center-content clearfix">
       <div id="sse1" class="">
         <div id="sses1"> 
           <ul>
@@ -91,7 +144,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
         <ul id="footerContacts" class="flex-box">
       </ul>
     </div>
-  </div>
+  </div> -->
 
   <!--
   The next line tells the browser where to download the JavaScript file you'll be

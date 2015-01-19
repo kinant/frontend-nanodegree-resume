@@ -21,7 +21,7 @@ var bio = {
 		// step 1: format & append role and name
 		formattedBio.name = HTMLheaderName.replace("%data%", bio.name);
 		formattedBio.role = HTMLheaderRole.replace("%data%", bio.role);
-		$("#header").prepend(formattedBio.name + formattedBio.role );
+		// $("#header").prepend(formattedBio.name + formattedBio.role );
 
 		 // step 2: format & append contacts
 		formattedBio.contacts = {
@@ -42,14 +42,14 @@ var bio = {
 
 		// step 3: format & append Picture
 		formattedBio.bioPic = HTMLbioPic.replace("%data%", bio.bioPic);
-		$("#header").append(formattedBio.bioPic);
+		$("#bio").append(formattedBio.bioPic);
 
 		// step 4: format & append welcome message
 		formattedBio.msg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMsg);
-		$("#header").append(formattedBio.msg);
+		$("#bio").append(formattedBio.msg);
 
 		// step 5: format & display Skills
-		$("#header").append(HTMLskillsStart);
+		$("#bio").append(HTMLskillsStart);
 
 		formattedBio.skills = [];
 		for (skill in bio.skills)
@@ -178,13 +178,13 @@ var projects = {
 			"title" : "Project 1: Mock-Up Website",
 			"dates" : "2014-2015",
 			"description" : "Udacity Nanodegree Project 1",
-			"images" : ["http://placehold.it/300x300","http://placehold.it/300x300"]
+			"images" : ["http://placehold.it/150x150","http://placehold.it/150x150"]
 		},
 		{
 			"title" : "Project 2: Resume Page",
 			"dates" : "2015",
 			"description" : "Udacity Nanodegree Project 2",
-			"images" : ["http://placehold.it/300x300","http://placehold.it/300x300"]
+			"images" : ["http://placehold.it/150x150","http://placehold.it/150x150"]
 		}
 	],
 	"display" : function(){

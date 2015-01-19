@@ -15,7 +15,7 @@ replace the %data% placeholder text you see in them.
 var HTMLheaderName = '<h1>%data%</h1>';
 var HTMLheaderRole = '<h5>%data%</h5>';
 
-var HTMLmenuGeneric = '<li><a href="%data%">%data%</a></li>'
+var HTMLmenuGeneric = '<li><a href="#%data%">%data%</a></li>'
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="blue-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="blue-text">mobile</span><span class="white-text">%data%</span></li>';

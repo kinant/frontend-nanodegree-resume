@@ -51,11 +51,10 @@ var bio = {
 		// step 5: format & display Skills
 		$("#bio").append(HTMLskillsStart);
 
-		formattedBio.skills = [];
+		// iterate through each skill and append
 		for (skill in bio.skills)
 		{
-			formattedBio.skills[skill] = HTMLskills.replace("%data%", bio.skills[skill]);
-			$("#skills").append(formattedBio.skills[skill]);
+			$("#skills").append(HTMLskills.replace("%data%", bio.skills[skill]));
 		}
 	}
 };
@@ -82,6 +81,7 @@ var work = {
 		// iterate over each job
 		for(job in work.jobs)
 		{
+			// format each element
 			var formattedJob = {
 				"employer" : HTMLworkEmployer.replace("%data%", work.jobs[job].employer),
 				"title" : HTMLworkTitle.replace("%data%", work.jobs[job].title),
@@ -90,11 +90,16 @@ var work = {
 				"description" : HTMLworkDescription.replace("%data%", work.jobs[job].description)
 			}
 
+			// append work start
 			$("#workExperience").append(HTMLworkStart);
+			
+			// append just the employer and title first
 			$(".work-entry:last").append(formattedJob["employer"] + formattedJob["title"]);
 
+			// iterate over each element of a job
 			for(detail in formattedJob)
 			{
+				//check that the element is neither title or employer
 				if(detail !== "title" && detail !== "employer")
 				{
 					$(".work-entry:last").append(formattedJob[detail]);
@@ -134,10 +139,13 @@ var education = {
 	"display" : function()
 	{
 		// step 1: display schools
+		// iterate over each school
 		for(school in education.schools)
 		{
+			// append school start
 			$("#education").append(HTMLschoolStart);
 
+			// format each element
 			var formattedSchool = {
 				"name" : HTMLschoolName.replace("%data%", education.schools[school].name),
 				"location" : HTMLschoolLocation.replace("%data%", education.schools[school].location),
@@ -145,8 +153,10 @@ var education = {
 				"dates" : HTMLschoolDates.replace("%data%", education.schools[school].dates)
 			};
 
+			// append the name, degree, date and location
 			$(".education-entry:last").append(formattedSchool["name"] + formattedSchool["degree"] + formattedSchool.dates + formattedSchool.location);
 
+			// iterate over each major, format it, and append. 
 			for(major in education.schools[school].majors)
 			{
 				var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors[major]);
@@ -155,11 +165,14 @@ var education = {
 		}
 
 		// step 2: display online courses
+		// iterate over each course
 		for(course in education.onlineCourses)
 		{
+			// append the starting html
 			$("#education").append(HTMLonlineClasses);
 			$("#education").append(HTMLschoolStart);
 
+			// format each element
 			var formattedCourse = {
 				"title" : HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title),
 				"school" : HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school),
@@ -167,6 +180,7 @@ var education = {
 				"url" : HTMLonlineURL.replace("%data%", education.onlineCourses[course].url)
 			};
 			
+			// append
 			$(".education-entry:last").append(formattedCourse.title + formattedCourse.school + formattedCourse.dates + formattedCourse.url);
 		}
 	}
@@ -189,19 +203,23 @@ var projects = {
 	],
 	"display" : function(){
 
+		// iterate over each project
 		for(project in projects.project){
 			
+			// format each element
 			var formattedProject = {
 				"title" : HTMLprojectTitle.replace("%data%", projects.project[project].title),
 				"dates" : HTMLprojectDates.replace("%data%", projects.project[project].dates),
 				"description" : HTMLprojectDescription.replace("%data%", projects.project[project].description),
 			};
 
-
+			// append the start
 			$("#projects").append(HTMLprojectStart);
+			
+			// append title, dates and description
 			$(".project-entry:last").append(formattedProject.title + formattedProject.dates + formattedProject.description);
 
-			// append images
+			// iterate over each image, format and append
 			for(image in projects.project[project].images){
 				var formattedImage = HTMLprojectImage.replace("%data%", projects.project[project].images[image]);
 				$(".project-entry:last").append(formattedImage);
@@ -210,55 +228,11 @@ var projects = {
 	}
 };
 
-// APPEND INformatION
-// Skills
-if(bio.skills.length!== 0)
-{
-
-}
-
-function displayWork()
-{
-	if(work.jobs.length!== 0)
-	{
-		var formattedJob = [];
-
-		for (job in work.jobs)
-		{
-			$("#workExperience").append(HTMLworkStart);
-			formattedJob[job] = {};
-			
-			formattedJob[job].title = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-			formattedJob[job].employer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-			formattedJob[job].location = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-			formattedJob[job].dates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-			formattedJob[job].description = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-			
-			$(".work-entry:last").append(formattedJob[job].employer + formattedJob[job].title + formattedJob[job].dates + formattedJob[job].description );
-		}
-	}
-}
-
-function inName(oldName) {
-    var finalName = oldName;
-    // Your code goes here!
-
-    finalName = finalName.split(" ");
-    finalName[1] = finalName[1].toUpperCase();
-    finalName[0] = finalName[0].toLowerCase();
-    finalName[0] = finalName[0].replace(finalName[0].charAt(0), finalName[0].charAt(0).toUpperCase());
-    // Don't delete this line!
-    return finalName[0] +" "+ finalName[1];
-}
-
+// call all the functions to display html
 bio.display();
 work.display();
 projects.display();
 education.display();
 
+// append map 
 $("#mapDiv").append(googleMap);
-$("#main").append(internationalizeButton);
-
-$(document).click(function(loc) {  
-	logClicks(loc.pageX, loc.pageY);
-});

@@ -112,13 +112,13 @@ a {
   display: none;
 }
 
-.orange {
+.blue {
   background-color: #3a5795;
   color : #8998BE;
   font-size: 24px;
 }
 
-.orange-text {
+.blue-text {
   color: #8998BE;
 }
 
@@ -136,8 +136,7 @@ a {
   background-color: #203165;
 }
 
-/* TODO: Replace with image later */
-#header {
+.header {
   background-color: #3a5795;
 }
 

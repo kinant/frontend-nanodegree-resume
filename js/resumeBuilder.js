@@ -18,10 +18,17 @@ var bio = {
 		// object to hold all formatted text
 		var formattedBio = {};
 
-		// step 1: format & append role and name
+		// step 1: format & append role, name and menu
 		formattedBio.name = HTMLheaderName.replace("%data%", bio.name);
 		formattedBio.role = HTMLheaderRole.replace("%data%", bio.role);
-		// $("#header").prepend(formattedBio.name + formattedBio.role );
+		
+		// append name and role
+		$(".name").append(formattedBio.name + formattedBio.role );
+
+		// append menu items
+		$("#menuBar").append(HTMLmenuGeneric.replace(/%data%/g, "experience"));
+		$("#menuBar").append(HTMLmenuGeneric.replace(/%data%/g, "education"));
+		$("#menuBar").append(HTMLmenuGeneric.replace(/%data%/g, "projects"));
 
 		 // step 2: format & append contacts
 		formattedBio.contacts = {
@@ -91,7 +98,7 @@ var work = {
 			}
 
 			// append work start
-			$("#workExperience").append(HTMLworkStart);
+			$("#experience").append(HTMLworkStart);
 			
 			// append just the employer and title first
 			$(".work-entry:last").append(formattedJob["employer"] + formattedJob["title"]);
@@ -236,3 +243,7 @@ education.display();
 
 // append map 
 $("#mapDiv").append(googleMap);
+
+$(document).click(function(loc) {  
+	logClicks(loc.pageX, loc.pageY);
+});

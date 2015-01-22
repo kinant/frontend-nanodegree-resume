@@ -226,6 +226,20 @@ span {
   }
 }
 
+#tabs {
+  background-color: white;
+  border: 0;
+}
+
+#tabs ul {
+  background-color: white;
+  border: 0;
+}
+
+#tabs ul li {
+  color: #337ab7;
+}
+
 #map {
   display: block;
   height: 100%;

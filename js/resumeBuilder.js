@@ -210,9 +210,12 @@ var projects = {
 	],
 	"display" : function(){
 
+		var counter = 1;
 		// iterate over each project
 		for(project in projects.project){
 			
+			$("#tabs > ul").append(HTMLprojectTab.replace(/%num%/g, ""+counter+""));
+
 			// format each element
 			var formattedProject = {
 				"title" : HTMLprojectTitle.replace("%data%", projects.project[project].title),
@@ -221,16 +224,18 @@ var projects = {
 			};
 
 			// append the start
-			$("#projects").append(HTMLprojectStart);
-			
+			$("#tabs").append(HTMLprojectTabPanelStart.replace("%data%", ""+counter+""));
+
 			// append title, dates and description
-			$(".project-entry:last").append(formattedProject.title + formattedProject.dates + formattedProject.description);
+			$("#tabs-" + counter).append(formattedProject.title + formattedProject.dates + formattedProject.description);
 
 			// iterate over each image, format and append
 			for(image in projects.project[project].images){
 				var formattedImage = HTMLprojectImage.replace("%data%", projects.project[project].images[image]);
-				$(".project-entry:last").append(formattedImage);
+				$("#tabs-" + counter).append(formattedImage);
 			}
+
+			counter++;
 		}
 	}
 };

@@ -28,7 +28,10 @@ var bio = {
 		// append menu items
 		$("#menuBar").append(HTMLmenuGeneric.replace(/%data%/g, "experience"));
 		$("#menuBar").append(HTMLmenuGeneric.replace(/%data%/g, "education"));
-		$("#menuBar").append(HTMLmenuGeneric.replace(/%data%/g, "projects"));
+		
+		// append the projects menu item
+		var formattedMenuItem = HTMLmenuGeneric.replace("%data%", "tabs");
+		$("#menuBar").append(formattedMenuItem.replace("%data%", "projects"));
 
 		 // step 2: format & append contacts
 		formattedBio.contacts = {

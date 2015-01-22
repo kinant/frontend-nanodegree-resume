@@ -38,10 +38,8 @@ var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
-var HTMLprojectTabStart ='<ul>';
 var HTMLprojectTab = '<li><a href="#tabs-%num%">Project %num%</a></li>';
 var HTMLprojectTabPanelStart = '<div id="tabs-%data%"></div>';
-var HTMLprojectTabEnd = '</ul>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';

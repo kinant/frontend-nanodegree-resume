@@ -9,3 +9,4 @@ Additional items:
 - Modified CSS
 - Menu bar
 - Scroll to top button
+- Tab Panel for Projects

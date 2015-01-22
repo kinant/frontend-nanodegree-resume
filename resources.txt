@@ -11,3 +11,9 @@ http://www.scrolltotop.com/
 
 4. For information on iterating over objects, I used:
 https://coderwall.com/p/_kakfa/javascript-iterate-through-object-keys-and-values
+
+5. For the tab panel in projects I used:
+http://jqueryui.com/tabs/
+http://api.jqueryui.com/tabs/
+http://api.jqueryui.com/theming/css-framework/
+
